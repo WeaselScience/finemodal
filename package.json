@@ -1,0 +1,10 @@
+{
+  "name": "finemodal",
+  "private": true,
+  "scripts": {
+    "dev-c9": "ROOT_URL=\"https://$C9_HOSTNAME\" meteor --port $IP:$PORT"
+  },
+  "dependencies": {
+    "meteor-node-stubs": "~0.2.0"
+  }
+}

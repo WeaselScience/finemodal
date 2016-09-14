@@ -1,0 +1,23 @@
+<body>
+    {{> main}}
+</body>
+
+<template name="main">
+    Hi! <button data-action="init" class="btn btn-primary">Click me!</button>
+</template>
+
+<template name="modal">
+    {{#FineModal size="sm"}}
+        {{>FineModalHeader title="Hello!" hideCloseButton=false}}
+        {{#FineModalBody}}
+            {{#if testData}}
+                I was opened with testing data: {{testData}}<br />
+            {{/if}}
+            <input type="text"><br />
+            <button data-action="moar" class="btn btn-primary">Open Moar!</button>
+        {{/FineModalBody}}
+        {{#FineModalFooter}}
+            <button data-action="close" class="btn btn-primary">Close Me!</button>
+        {{/FineModalFooter}}
+    {{/FineModal}}
+</template>

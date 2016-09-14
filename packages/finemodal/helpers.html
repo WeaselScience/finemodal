@@ -1,0 +1,41 @@
+<template name="FineModal" args="[size]">
+    <div class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog {{#if size}}modal-{{size}}{{/if}}" role="document">
+            <div class="modal-content">
+                {{> Template.contentBlock}}
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="FineModalHeader" args="[title], [hideCloseButton]">
+    <div class="modal-header">
+        {{#if Template.contentBlock}}
+            {{> Template.contentBlock}}
+        {{else}}
+            {{#unless hideCloseButton}}
+                {{> FineModalHeaderCloseButton}}
+            {{/unless}}
+
+            <h4 class="modal-title">{{title}}</h4>
+        {{/if}}
+    </div>
+</template>
+
+<template name="FineModalHeaderCloseButton">
+    <button type="button" class="close" data-dismiss="modal">
+        <span>&times;</span>
+    </button>
+</template>
+
+<template name="FineModalBody">
+    <div class="modal-body">
+        {{> Template.contentBlock}}
+    </div>
+</template>
+
+<template name="FineModalFooter">
+    <div class="modal-footer">
+        {{> Template.contentBlock}}
+    </div>
+</template>
