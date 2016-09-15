@@ -1,6 +1,6 @@
 Package.describe({
     name: 'apotex:finemodal',
-    version: '0.0.1',
+    version: '0.1.0',
     summary: 'Yet another (again) implementation of the Boostrap Modal',
     git: 'https://github.com/weasel-science/finemodal',
     documentation: '../../README.md'

@@ -39,12 +39,9 @@ export class FineModal {
 
             $prev.modal('hide');
 
-            $prev.one('hidden.bs.modal', () => {
-                this._build();
-            });
-        } else {
-            this._build();
         }
+
+        this._build();
     }
 
     _build() {
@@ -72,7 +69,11 @@ export class FineModal {
                 Blaze.remove(this._view);
                 this._isVisible.set(false);
                 Stack.pop();
+            }
+        });
 
+        this._getModalNode().on('hide.bs.modal', () => {
+            if (this._isLastInStack()) {
                 if (prev) {
                     prev._getModalNode().modal('show');
                 }

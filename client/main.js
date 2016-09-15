@@ -6,13 +6,13 @@ Template.main.events({
             template: Template.modal
         });
 
-        modal.onShow(() => {
+        /*modal.onShow(() => {
             alert('onShow')
         });
 
         modal.onHide(() => {
             alert('onHide')
-        });
+        });*/
 
         modal.show();
     }
